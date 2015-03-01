@@ -1,0 +1,39 @@
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+Makefile
+ui_*.h
+*-build-*
+
+# other editor annoyances
+~*
+*~
+\#*
+*#
+_* 
+*.db
+Sermon DB
+
+# OS X craptastick stuffs
+.DS_Store
+._DS_Store
+._.DS_Store
+
+#ctags stuffs
+.tags
+.tags_sorted_by_file
