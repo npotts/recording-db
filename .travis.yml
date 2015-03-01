@@ -15,5 +15,5 @@ install:
   - sudo apt-get install -q  build-essential
 
 script:
-  - qmake
+  - cd project && qmake
   - make -j$(nproc)
