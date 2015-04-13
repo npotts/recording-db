@@ -63,7 +63,12 @@ recording_db::~recording_db() {
 }
 void recording_db::save() {
   /* Save the pixmap */
-  QString fguess = ui->date->dateTime().toString("yyyy-MM-dd-%1.png").arg(ui->message->text().replace("\n","").replace(" ","-"));
+  QString fguess = ui->date->dateTime()\
+    .toString("yyyy-MM-dd-%1.png")\
+    .arg(ui->message->text()\
+      .replace(QRegExp(QString::fromUtf8("[-`~!@#$%^&*()_—+=|:;<>«»,.?/{}\'\"\\\[\\]\\\\]")), "")
+      .replace(QRegExp(QString::fromUtf8("[ -_—]")), "-")
+    );
   QString f = QFileDialog::getSaveFileName(this,"Where to save a CD image",fguess,"png image (*png);;jpg Images (*jpg)", 0, 0);
   if (f == "")
     return;
