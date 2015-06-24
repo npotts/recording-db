@@ -18,7 +18,7 @@ target_link_libraries(myexe Qt4::QtGui Qt4::QtXml)
 
 
 
-SET(SRC main.cpp recording_db.cpp recording_db.h)
+SET(SRC main.cpp recording_db.cpp recording_db.h recording_db.ui)
 
 SET(RESOURCES resources.qrc)
 
