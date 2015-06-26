@@ -11,6 +11,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QtSql>
+#include "ui_recording_db.h"
 
 #ifndef __GITREV__
 #define __GITREV__ "no-version-yet"

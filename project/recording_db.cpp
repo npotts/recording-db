@@ -1,4 +1,3 @@
-#include "ui_recording_db.h"
 #include "recording_db.h"
 
 recording_db::recording_db(QWidget *parent) : QMainWindow(parent), newPrn(false), ui(new Ui::recording_db) {
