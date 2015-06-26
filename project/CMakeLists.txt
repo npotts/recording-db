@@ -12,6 +12,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall") # enable warnings (always goo
 
 project(${APPNAME})
 include (InstallRequiredSystemLibraries)
+INCLUDE_DIRECTORIES(${project_BINARY_DIR}/source/gui)
 
 find_package(Qt4 REQUIRED QtGui QtNetwork QtSql)
 #find_package(Qt5Widgets REQUIRED)
@@ -20,7 +21,7 @@ find_package(Qt4 REQUIRED QtGui QtNetwork QtSql)
 #find_package(Qt5PrintSupport REQUIRED)
 
 SET(SRC main.cpp recording_db.cpp recording_db.h recording_db.ui)
-QT4_WRAP_UI(recording_db.ui)
+QT4_WRAP_UI(UIS_HDRS recording_db.ui)
 
 SET(RESOURCES resources.qrc)
 
