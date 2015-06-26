@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8.11)
 
+
 SET(APPNAME "Recording-db")
 
 
@@ -10,6 +11,7 @@ set(CMAKE_AUTORCC ON) #same, but for RCC files
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall") # enable warnings (always good)
 
 project(${APPNAME})
+include (InstallRequiredSystemLibraries)
 
 find_package(Qt4 REQUIRED QtGui QtNetwork QtSql)
 #find_package(Qt5Widgets REQUIRED)
@@ -18,7 +20,7 @@ find_package(Qt4 REQUIRED QtGui QtNetwork QtSql)
 #find_package(Qt5PrintSupport REQUIRED)
 
 SET(SRC main.cpp recording_db.cpp recording_db.h recording_db.ui)
-QT4_WRAP_UI()
+QT4_WRAP_UI(recording_db.ui)
 
 SET(RESOURCES resources.qrc)
 
